@@ -12,7 +12,7 @@ $outputFile = "$($parentPath)\Files\Result-$($env:username).csv"
 "" | Out-File $outputFile -NoNewline
 
 
-."$($parentPath)\Scripts\setPassword.ps1" -users $users -outputFile $outputFile
+."$($parentPath)\Scripts\setPassword.ps1" -users $users -parentPath $parentPath -outputFile $outputFile
 ."$($parentPath)\Scripts\addMail.ps1" -users $users -outputFile $outputFile
 ."$($parentPath)\Scripts\moveObject.ps1" -users $users -ou $ou -outputFile $outputFile
 ."$($parentPath)\Scripts\exportDataForNHMail.ps1" -users $users -parentPath $parentPath -outputFile $outputFile
